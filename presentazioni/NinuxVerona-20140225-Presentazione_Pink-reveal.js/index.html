@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>NinuxVerona - La community wireless di Verona</title>
+
+		<meta name="description" content="NinuxVerona - La community wireless di Verona">
+		<meta name="author" content="Ilario Gelmetti">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Ninux Verona</h1>
+					<h3>La community wireless di Verona</h3>
+					<p>
+						<small>Realizzato da <a href="http://ilario.verona.ninux.org">Ilario Gelmetti</a> / <a href="mailto://ilario@eigenlab.org">ilario@eigenlab.org</a> / Chimico e linuxaro.</small>
+					</p>
+					<p>
+                                                <small>In collaborazione con <a href="http://studiareconlentezza.noblogs.org/">Collettivo Studiare con Lentezza</a></small>
+                                        </p>
+                                        <p>
+                                                <small>Presso <a href="http://www.circolopink.it">Circolo Pink</a> - 25 febbraio 2014 </small>
+                                        </p>
+
+				</section>
+
+				<section data-background="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/1024px-Internet_map_1024.jpg" style="background: rgba(255,255,255,0.9)">
+					<h2><span style="color:black">Cos'&egrave; Internet?</span></h2>
+					<span style="color:black"><p>
+						 <i>inter-net</i> = reti (fisiche) interconnesse
+					</p>
+					<p>
+						 Ciascuna rete si gestisce in modo autonomo
+					</p></span>
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+						<h2>Negli ultimi anni si stanno presentando diversi problemi</h2>
+						<p>
+							[Notizia dell'altroieri](http://venturebeat.com/2014/02/23/netflix-paying-comcast-to-stream-its-content-smoothly/) è una minaccia alla "[neutralità](https://www.youtube.com/watch?v=NLKyIhYwyWc)" della rete: i provider decideranno quali servizi/siti vi arriveranno più veloci e quali più lenti.
+						</p>
+						</script>
+					</section>
+					<section>
+						<h2>Ai dittatori internet non piace</h2>
+						<img width="280" src="img/erdogan.jpg" alt="Erdogan">
+						<p>
+						«Oggi esiste una minaccia che si chiama Twitter»<br>
+						«I social media sono la peggior minaccia alla società»<br>
+						«Un tweet e’ piu’ pericoloso di un’auto imbottita di bombe»<br>
+						</p>
+						<ul>
+						<li>Filtraggio dei siti scomodi</li>
+						<li>Registrazione di chi accede a questi siti</li>
+						<li>Spionaggio diretto delle comunicazioni</li>
+						<li>Furto delle credenziali e lettura delle comunicazioni</li>
+
+					</ul>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						<h2>Quando gli pare possono <br>spegnerci internet</h2>
+						<p>Birmania 2007, Egitto 2011, Libia 2011, Siria 2011, Sudan 2013</p><br>
+						<img src="img/egitto.jpg" alt="egitto spegnimento internet">
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+						<h2>Quando gli pare possono <br>spegnerci internet</h2>
+						<p> anche Obama <a href="http://www.huffingtonpost.com/2010/06/25/internet-kill-switch-appr_n_625856.html">ha voluto un internet kill switch</a> a disposizione</p>
+						<img src="img/obama.jpg" alt="Obama internet surveillance">
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<h2>Per contrastare la censura: il P2P</h2>
+					<p>
+						Software che utilizzano l'approccio peer to peer sono stati la prima risposta alla censura.
+						
+					</p>
+					<table><tr>
+					<td><img width="280" src="img/emule.png" alt="eMule"></td><td><img width="280" src="img/bitcoin.png" alt="bitcoin"></td><td><img width="280" src="img/diaspora.jpg" alt="diaspora"></td></tr></table>
+				</section>
+
+				<section data-markdown><script type="text/template">
+					<h2>Ma non basta più</h2>
+					<p>
+						Ci sono le tecnologie per [bloccare selettivamente](http://l7-filter.sourceforge.net/) un tipo di traffico dati (esempio: solo bittorrent), </p><p>
+						
+						sia gli stati sia i provider hanno il potere di decidere cosa possiamo vedere, di [tagliarci la connessione](https://it.wikipedia.org/wiki/HADOPI) o di spegnere internet su ampie zone. 
+					</p><br>
+					<p>
+						Perché questo è possibile?
+					</p>
+					</script>
+				</section>
+
+				<section>
+					    <section>
+						    <h2>Perché questo è possibile?</h2>
+						    <p>
+							    1) Perché internet ha una struttura gerarchica, <br>
+							    basta controllare pochi punti per controllarlo tutto.
+						    </p>
+						    <img width="350" src="img/scalefreenetwork.png" alt="scale free network">
+					    </section>
+
+					    <section>
+						    <h2>Perché questo è possibile?</h2>
+						    <p>
+							    2) Perché l'infrastruttura fisica di internet non è nostra. <br>
+							    </p><p><strong>Rete bene comune = per tutti = di tutti</strong></p><br><p>Invece
+							    <ul>
+							    <li>non è per tutti: digital divide, costi...</li>
+							    <li>non è di tutti: un bene troppo prezioso perchè sia sotto il controllo di pochi</li>
+							    </ul>
+						    </p>
+					    </section>
+				</section>
+				<section>
+					      <section>
+						      <h2>L'alternativa: costruire dal basso una rete non gerarchica</h2>
+						      <img style="border:0px" width="700" src="img/ninux.png" alt="ninux">
+						      <p>
+						      Community network: rete di telecomunicazione costruita e gestita da una o più comunità di persone.
+						      </p>
+						      <p>Ciascun nodo della rete è di proprietà di una persona diversa</p>
+						      <p>La gestione è distribuita tra i partecipanti in modo paritario</p>
+					      </section>
+
+					      <section data-markdown><script type="text/template">
+						      <h2>L'alternativa: costruire dal basso una rete non gerarchica</h2>
+						      <img style="border:0px" width="700" src="img/ninux.png" alt="ninux">
+						      <ul>
+							      <li>Più libertà</li>
+							      <li>Più consapevolezza</li>
+							      <li>[Meno censura](https://wlan-si.net/en/blog/2012/10/10/we-are-internationally-wireless/)</li>
+							      <li>Meno logiche di profitto (che causano il digital divide)</li>
+							      <li>Resistenza e resilienza</li>
+						      </ul>
+						      Svantaggi:
+						      <ul>
+						      <li>È una faticaccia.</li>
+						      </ul>
+						      </script>
+					    </section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					<h2>Storia di Ninux</h2>
+					<ol>
+						<li value="2002">Nino fonda Ninux a Roma: desiderio di sperimentare</li>
+						<li value="2005-2009">sperimentazione servizio internet per le famiglie e spazi sociali</li>
+						<li value="2010">La rete parte anche a Pisa e a cascata in [altre città](http://map.ninux.org)</li>
+						<li value="2013">NinuxRoma [entra davvero](http://www.namex.it/en/who/members) a far parte di internet
+						<li value="2014">Nasce pure Ninux Verona</li>
+					</ol>
+					</script>
+				</section>
+
+				<section>
+					    <section data-markdown>
+						    <script type="text/template">
+							    ## In pratica cosa fate?
+							    Similarmente a come avviene nelle case di tutti noi:
+							    <img width="500" src="img/ap-laptop.jpg">
+						    </script>
+					    </section>
+
+					    <section data-markdown>
+						    <script type="text/template">
+							    ## In pratica cosa fate?
+							    Colleghiamo diverse case usando dei router wireless da esterni.
+							    <img width="1000" src="img/ap-laptop-community.jpg">
+						    </script>
+					    </section>
+				</section>
+
+				<section>
+					    <section data-markdown>
+						    <script type="text/template">
+					## I principi
+					Aderiamo ai principi etici delle [Free Networks](http://thefnf.org/)
+						
+					* libertà di comunicazione
+					* libertà di partecipazione passiva ed attiva
+						    </script>
+					    </section>
+
+					    <section data-markdown>
+						    <script type="text/template">
+					## I principi
+					
+					La community
+						
+					* l’internet delle persone: promuovere un nuovo modello di rete
+					<img width="1000" src="img/community.jpg">
+						    </script>
+					    </section>
+
+					    <section data-markdown>
+						    <script type="text/template">
+					## I principi
+					
+					La collaborazione
+						
+					<img width="800" src="img/eigennet-montaggio-exfausto2.jpg">
+						    </script>
+					    </section>
+
+					    <section data-markdown>
+						    <script type="text/template">
+					## I principi
+					
+					La condivisione delle conoscenze
+						
+					<img width="800" src="img/ninuxday.jpg">
+						    </script>
+					    </section>
+
+					    <section data-markdown>
+						    <script type="text/template">
+					## I principi
+					
+					* La decentralizzazione - Nessuna persona/ente centrale in grado di avere il controllo.
+					* La neutralità - Tutti i bit nascono uguali :)
+						    </script>
+					    </section>
+
+					    <section data-markdown>
+						    <script type="text/template">
+					## I principi
+					
+					* La trasparenza
+					* Il software libero - Non ci fidiamo di aziende che tengono segreto il funzionamento dei loro programmi.
+						    </script>
+					    </section>
+
+				</section>
+
+				<section>
+					<section data-markdown>
+							    <script type="text/template">
+						## Motivazioni
+						
+						* Libertà di comunicare
+						* Protezione civile (esempio fare una rete che resista ai [terremoti](http://www.repubblica.it/cronaca/2012/05/29/news/istruzioni_per_aprire_wi_fi_per_comunicazioni-36130780/))
+						* Divertimento
+						* Attivismo
+						* Paranoia
+						* ...
+						
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<h2>Chi può partecipare?</h2>
+					<p>
+						Chiunque!! Più la rete è composta da gruppi differenti più è decentralizzata e meno è possibile dominarla!
+					</p>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+						## Fatta la rete, cosa ci si mette dentro?
+						
+						Perchè devo mettere i miei file personali su un server chissà dove, gestito da chissà chi?
+							
+						* Telefonia VoIP
+						* Messaggistica (chat, email...)
+						* Archiviazione in rete, backup e condivisione dati
+						* Streaming video e software per videoconferenze
+						* Strumenti di scrittura collaborativa
+						* Server di gioco
+						* Social network locali
+						* [...](http://wiki.ninux.org/Servizi)
+						* Spazio alla fantasia...
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+						## Fatta la rete, cosa ci si mette dentro?
+						
+						Gli unici costi sono:
+						
+						* L'acquisto (circa 60-70 euri) ed installazione dell'antenna (dipende da quanto materiale serve).
+						* Il consumo di corrente che è minimo (5W, un decimo di una lampadina).
+						* Il traffico interno alla rete non costa.
+						
+						<br>
+						Uno dei servizi può essere l'accesso a internet.
+							
+						* Se uno dei partecipanti lo condivide (la sua connessione continua ad avere la priorità)
+						* Se si acquista in da un provider (economia di scala => si risparmia)
+						* Altro...
+						</script>
+						
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+						## Nessun contratto
+						
+						I partecipanti non firmano nulla, si possono impegnare a rispettare il picopeering agreement:
+						
+						* ciascuno garantisce transito libero, gratuito e indisturbato attraverso la sua rete libera
+						* ciascuno permette a tutti gli altri di collegarsi alla sua rete
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						## Nessuna garanzia
+						
+						Non essendo un servizio professionale il servizio è fornito "così com'è", senza garanzia né obblighi di alcun tipo.
+						
+						Se qualcosa non funziona, nessuno di noi è pagato per farlo funzionare, chi avrà tempo e voglia lo sistemerà.
+						
+						Non siamo un internet service provider.
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						## Partecipanti sì, scrocconi anche no
+						
+						La partecipazione è aperta a tutti ma, ripeto, non siamo un internet service provider, se qualcuno si aggrega solo per avere internet gratis o si sbatte per averlo e far funzionare la rete oppure sappia che nessuno gli garantirà un servizio.
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Le antenne</h2>
+						<p>
+							Antenne autocostruite
+						</p>
+						
+						<img width="800" src="img/antenna_autocostruita.jpg">
+					</section>
+
+					<section>
+						<h2>Le antenne</h2>
+						<p>
+							Antenne comprate router autocostruiti
+						</p>
+						
+						<img width="800" src="img/pc-tetto/01.jpg">
+					</section>
+
+					<section>
+						<h2>Le antenne</h2>
+						<p>
+							Antenne comprate router autocostruiti
+						</p>
+						
+						<img height="600" src="img/pc-tetto/02.jpg">
+					</section>
+
+					<section>
+						<h2>Le antenne</h2>
+						<p>
+							Antenne comprate router autocostruiti
+						</p>
+						
+						<img height="600" src="img/pc-tetto/03.jpg">
+					</section>
+
+					<section>
+						<h2>Le antenne</h2>
+						<p>
+							Antenne comprate router autocostruiti
+						</p>
+						
+						<img height="600" src="img/pc-tetto/04.jpg">
+					</section>
+
+					<section>
+						<h2>Le antenne</h2>
+						<p>
+							Router wireless da interni
+						</p>
+						
+						<img width="800" src="img/wrt54gl_da_giardino.jpg">
+					</section>
+
+					<section>
+						<h2>Le antenne</h2>
+						<p>
+							Router wireless da esterni
+						</p>
+						
+						<img width="800" src="img/eigennet-pico_e_nano-vamanda.jpg">
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+							<script type="text/template">
+						## Internet è gerarchico, invece Ninux?
+						
+						* Proprietà della rete distribuita a tutti
+						* Gestione della rete pure
+						* Le antenne sono tutte uguali, non c'è una divisione client-server
+						
+						Utilizzando il nuovo software [LibreMesh](http://libre-mesh.org/) una rete comunitaria (non solo wireless) potrebbe crescere anche fino alle dimensioni enormi di internet.
+						
+						</script>
+					</section>
+					<section data-markdown>
+							<script type="text/template">
+						I dati seguono il percorso migliore, senza badare ad accordi commerciali, modificandolo al volo per bypassare gli eventuali guasti.
+						
+						![mesh](img/MeshAnimation.gif)
+						</script>
+					</section>
+					<section data-markdown>
+							<script type="text/template">
+						La rete a Pisa funziona esattamente così.
+						
+						![pisa eigenNet](img/EigenNet.jpg)
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<h2>Ed è legale?</h2>
+					<p>Chi ha iniziato nel 2002 era nella completa illegalità.</p>
+					<p>Ora è legale fare telecomunicazioni sulle frequenze libere ovunque</p>
+					<p>È legale anche condividere l'ADSL con la community ma</p>
+					<ul><li>ci si prende la responsabilità del traffico (i romani non hanno mai avuto problemi in questo senso)</li>
+					<li>il vostro provider potrebbe vietarlo</li></ul><br>
+					<p>Più informazioni su <a href="http://wiki.ninux.org/LeggiWireless">http://wiki.ninux.org/LeggiWireless</a>
+				</section>
+
+				<section>
+					<h2>E fa male?</h2>
+					In breve:
+					<ul><li>emette un decimo della potenza di un cellulare</li>
+					<li>non sta in tasca come il cellulare, sta sul tetto di casa, dunque la distanza e la soletta abbattono le onde</li></ul>
+					
+					<br>
+					<p>
+					Se non vi fate problemi ad avere un cellulare, non fatevi problemi ad avere una antenna di Ninux.
+					</p>
+				</section>
+
+				<section>
+					
+						<h3>Internet ha cambiato la nostra vita <br> in modo definitivo.</h3></p>
+						<p><h3>Un bene così importante deve essere comune, <br> libero e facilmente accessibile.</h3></p>
+						<p>Il modello proposto in questo documento è alla nostra portata.</p>
+						<p>Dobbiamo impegnarci ancora molto per realizzarlo.</p>
+						<p>Ma abbiamo tanti esempi di piccoli/grandi successi:<br> <a href="http://map.ninux.org">NinuxRoma</a>, <a href="https://guifi.net/en/node/2413/view/map">Guifi.net</a> in Catalonia (Spagna), <a href="https://wind.awmn.net/?page=nodes">AWMN in Grecia</a>, <a href="http://berlin.freifunk.net/network/map/">Freifunk</a> a Berlino e molte altre...</p>
+					
+				</section>
+
+				<section>
+					<img style="border:0px" width="800" src="img/ninux.png">
+					
+					<br>
+					<p>Più informazioni su <a href="http://ninux.org">ninux.org</a>, su <a href="http://wiki.eigenlab.org">wiki.eigenlab.org</a> e <a href="http://verona.ninux.org">verona.ninux.org</a>.</p>
+					<br><p>Abbiamo una mailing list per NinuxVerona su <a href="http://ml.ninux.org">ml.ninux.org</a>.</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
